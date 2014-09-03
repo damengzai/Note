@@ -1,0 +1,164 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+<!-- 根据重要性和紧急性分区 -->
+<!-- 水平坐标是紧急性urge，竖直坐标是重要性important -->
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:baselineAligned="false"
+    >
+    <!-- 重要但不紧急 -->
+    <LinearLayout
+        android:id="@+id/impnoturge"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#9100ff00"
+        android:orientation="vertical"
+         >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/impnoturge" />
+
+            <ImageButton
+                android:id="@+id/add_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_launcher"
+                android:contentDescription="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/note_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 重要且紧急 -->
+
+    <LinearLayout
+        android:id="@+id/impurge"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="#91ff0000"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/impurge"/>
+
+            <ImageButton
+                android:id="@+id/add_btn1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_launcher"
+                android:contentDescription="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/note_list1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+<LinearLayout
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    >
+     <!-- 不重要且不紧急 -->
+    <LinearLayout
+        android:id="@+id/noimpnoturge"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#910000ff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/noimpnoturge" />
+
+            <ImageButton
+                android:id="@+id/add_btn2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_launcher"
+                android:contentDescription="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/note_list2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 不重要但紧急 -->
+
+    <LinearLayout
+        android:id="@+id/notimpurge"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="#919347e0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notimpurge"/>
+
+            <ImageButton
+                android:id="@+id/add_btn3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_launcher"
+                android:contentDescription="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/note_list3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

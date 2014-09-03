@@ -1,0 +1,28 @@
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+    
+    <EditText 
+        android:id="@+id/noteContext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:lines="5"
+        android:hint="@string/todoTxt"
+        />
+	<Button 
+	    android:id="@+id/commit_btn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#00000000"
+	    android:textColor="#000000"
+	    android:text="@string/commitTxt"
+	    
+	    />
+   
+
+</LinearLayout>

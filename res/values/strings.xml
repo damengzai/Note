@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Note</string>
+    <string name="title_activity_note">Note</string>
+    <string name="all_notes">所有笔记</string>
+    <string name="title_activity_add_note">AddNote</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="todoTxt">今天要做......</string>
+    <string name="commitTxt">记一下</string>
+    <string name="text">text</string>
+    <string name="title_activity_deal">DealActivity</string>
+    <string name="delete_txt">删除</string>
+    <string name="other_txt">其他</string>
+    <string name="cancle_txt">取消</string>
+    <string name="impnoturge">重要但不紧急</string>
+    <string name="impurge">重要且紧急</string>
+    <string name="noimpnoturge">不重要且不紧急</string>
+    <string name="notimpurge">不重要但紧急</string>
+    <string name="title_activity_main">MainActivity</string>
+
+</resources>
