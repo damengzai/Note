@@ -67,6 +67,7 @@ public class NoteAdapter extends BaseAdapter{
 				
 				Intent intent = new Intent();
 				intent.setClass(context, DealActivity.class);
+				intent.putExtra("content", note.getNoteContext());
 				intent.putExtra("id", note.getId());
 				context.startActivity(intent);
 				context.overridePendingTransition(R.anim.startin, R.anim.startout);

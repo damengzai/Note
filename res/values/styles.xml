@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -35,6 +35,16 @@
     <style name="AnimationActivity" mce_bogus="1" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/startin</item>
         <item name="android:activityOpenExitAnimation">@anim/startout</item>
+    </style>
+    <!-- 没有titlebar而且保持了原来的样式 -->
+    <style name="BaseWithoutTitlebar" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- TextView样式 -->
+    <style name="text_style">
+        <item name="android:textColor">#F74916</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">5dp</item>
     </style>
 
 </resources>

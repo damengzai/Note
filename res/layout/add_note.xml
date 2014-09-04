@@ -1,28 +1,68 @@
-<LinearLayout
-     xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffffff"
     android:orientation="vertical" >
-    
-    <EditText 
+
+    <EditText
         android:id="@+id/noteContext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:lines="5"
         android:hint="@string/todoTxt"
-        />
-	<Button 
-	    android:id="@+id/commit_btn"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:background="#00000000"
-	    android:textColor="#000000"
-	    android:text="@string/commitTxt"
-	    
-	    />
-   
+        android:lines="5"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/commit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="@string/commitTxt"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:id="@+id/add_alarm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/check_alarm_or_not"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/check_out" />
+
+        <TextView
+            android:id="@+id/show_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_alarm_txt"
+            style="@style/text_style" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_date_txt"
+            style="@style/text_style" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_time_txt"
+            style="@style/text_style"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </LinearLayout>

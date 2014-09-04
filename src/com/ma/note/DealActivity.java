@@ -10,11 +10,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DealActivity extends Activity implements OnClickListener {
 	
 	private Button delete, other, cancle;
+	private TextView showtv;
 	private Intent intent;
 	private NoteDao dao;
 
@@ -26,12 +28,14 @@ public class DealActivity extends Activity implements OnClickListener {
 		delete = (Button) findViewById(R.id.delete_btn);
 		other = (Button) findViewById(R.id.other_btn);
 		cancle = (Button) findViewById(R.id.cancle_btn);
+		showtv = (TextView) findViewById(R.id.show_tv);
 		delete.setOnClickListener(this);
 		other.setOnClickListener(this);
 		cancle.setOnClickListener(this);
 		dao = new NoteDao(this);
 		
 		intent = getIntent();
+		showtv.setText("确定删除\""+intent.getExtras().getString("content")+"\"这条信息?");
 	}
 	@Override
 	public void onAttachedToWindow() {

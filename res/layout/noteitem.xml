@@ -8,7 +8,7 @@
         android:id="@+id/note_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp"
+        android:textSize="24sp"
         android:text="@string/text"
         
         />

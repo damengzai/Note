@@ -8,6 +8,7 @@ import com.ma.note.db.NoteDao;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -110,6 +111,11 @@ public class Note extends Activity implements OnClickListener {
 		finish();
 		overridePendingTransition(R.anim.startin, R.anim.startout);
 	}
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		return super.onTouchEvent(event);
+	}
 
 	public void update() {
 		// TODO Auto-generated method stub
@@ -123,9 +129,9 @@ public class Note extends Activity implements OnClickListener {
 			noteAdapter = new NoteAdapter(this, notes);
 			noteAdapter.notifyDataSetChanged();
 			impnoturge.setAdapter(noteAdapter);
-			impurge.setAdapter(noteAdapter);
-			noimpnoturge.setAdapter(noteAdapter);
-			notimpurge.setAdapter(noteAdapter);
+//			impurge.setAdapter(noteAdapter);
+//			noimpnoturge.setAdapter(noteAdapter);
+//			notimpurge.setAdapter(noteAdapter);
 		}
 		if (notes1.size() > 0) {
 			noteAdapter1 = new NoteAdapter(this, notes1);

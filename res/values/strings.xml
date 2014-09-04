@@ -18,5 +18,8 @@
     <string name="noimpnoturge">不重要且不紧急</string>
     <string name="notimpurge">不重要但紧急</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="add_alarm_txt">添加闹钟提醒</string>
+    <string name="add_date_txt">添加日期</string>
+    <string name="add_time_txt">添加时间</string>
 
 </resources>

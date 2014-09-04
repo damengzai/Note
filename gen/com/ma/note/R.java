@@ -15,41 +15,52 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int check_in=0x7f020000;
+        public static final int check_out=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int add_btn=0x7f070008;
-        public static final int add_btn1=0x7f07000c;
-        public static final int add_btn2=0x7f070010;
-        public static final int add_btn3=0x7f070014;
-        public static final int cancle_btn=0x7f070003;
-        public static final int commit_btn=0x7f070005;
-        public static final int delete_btn=0x7f070001;
+        public static final int add_alarm_layout=0x7f070007;
+        public static final int add_btn=0x7f07000f;
+        public static final int add_btn1=0x7f070013;
+        public static final int add_btn2=0x7f070017;
+        public static final int add_btn3=0x7f07001b;
+        public static final int cancle_btn=0x7f070004;
+        public static final int check_alarm_or_not=0x7f070008;
+        public static final int commit_btn=0x7f070006;
+        public static final int date_tv=0x7f07000b;
+        public static final int delete_btn=0x7f070002;
         public static final int dialog_layout=0x7f070000;
-        public static final int impnoturge=0x7f070006;
-        public static final int impurge=0x7f07000a;
-        public static final int noimpnoturge=0x7f07000e;
-        public static final int noteContext=0x7f070004;
-        public static final int note_item=0x7f070016;
-        public static final int note_list=0x7f070009;
-        public static final int note_list1=0x7f07000d;
-        public static final int note_list2=0x7f070011;
-        public static final int note_list3=0x7f070015;
-        public static final int notimpurge=0x7f070012;
-        public static final int other_btn=0x7f070002;
-        public static final int title=0x7f070007;
-        public static final int title1=0x7f07000b;
-        public static final int title2=0x7f07000f;
-        public static final int title3=0x7f070013;
+        public static final int impnoturge=0x7f07000d;
+        public static final int impurge=0x7f070011;
+        public static final int noimpnoturge=0x7f070015;
+        public static final int noteContext=0x7f070005;
+        public static final int note_item=0x7f07001d;
+        public static final int note_list=0x7f070010;
+        public static final int note_list1=0x7f070014;
+        public static final int note_list2=0x7f070018;
+        public static final int note_list3=0x7f07001c;
+        public static final int notimpurge=0x7f070019;
+        public static final int other_btn=0x7f070003;
+        public static final int show_time=0x7f070009;
+        public static final int show_tv=0x7f070001;
+        public static final int time_layout=0x7f07000a;
+        public static final int time_tv=0x7f07000c;
+        public static final int title=0x7f07000e;
+        public static final int title1=0x7f070012;
+        public static final int title2=0x7f070016;
+        public static final int title3=0x7f07001a;
     }
     public static final class layout {
         public static final int activity_deal=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int add_note=0x7f030002;
-        public static final int note=0x7f030003;
-        public static final int noteitem=0x7f030004;
+        public static final int add_note=0x7f030001;
+        public static final int note=0x7f030002;
+        public static final int noteitem=0x7f030003;
     }
     public static final class string {
+        public static final int add_alarm_txt=0x7f050011;
+        public static final int add_date_txt=0x7f050012;
+        public static final int add_time_txt=0x7f050013;
         public static final int all_notes=0x7f050002;
         public static final int app_name=0x7f050000;
         public static final int cancle_txt=0x7f05000b;
@@ -98,7 +109,13 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        /**  没有titlebar而且保持了原来的样式 
+         */
+        public static final int BaseWithoutTitlebar=0x7f060005;
         public static final int DialogStyleBottom=0x7f060002;
         public static final int ThemeActivity=0x7f060003;
+        /**  TextView样式 
+         */
+        public static final int text_style=0x7f060006;
     }
 }
