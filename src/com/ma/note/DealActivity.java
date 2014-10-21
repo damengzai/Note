@@ -35,7 +35,7 @@ public class DealActivity extends Activity implements OnClickListener {
 		dao = new NoteDao(this);
 		
 		intent = getIntent();
-		showtv.setText("确定删除\""+intent.getExtras().getString("content")+"\"这条信息?");
+		showtv.setText("纭鍒犻櫎\""+intent.getExtras().getString("content")+"\"杩欐潯绗旇?");
 	}
 	@Override
 	public void onAttachedToWindow() {

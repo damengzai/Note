@@ -21,10 +21,10 @@ public class Note extends Activity implements OnClickListener {
 	private ImageButton add_btn, add_btn1, add_btn2, add_btn3;
 	private NoteDao dao;
 	private List<com.ma.note.po.Note> notes, notes1, notes2, notes3;
-	private ListView impnoturge;// ÖØÒªµ«²»½ô¼±
-	private ListView impurge;// ÖØÒªÇÒ½ô¼±
-	private ListView noimpnoturge;// ²»ÖØÒªÇÒ²»½ô¼±
-	private ListView notimpurge;// ²»ÖØÒªµ«½ô¼±
+	private ListView impnoturge;// é‡è¦ä½†ä¸ç´§æ€¥
+	private ListView impurge;// é‡è¦ä¸”ç´§æ€¥
+	private ListView noimpnoturge;// ä¸é‡è¦ä¸ç´§æ€¥
+	private ListView notimpurge;// ä¸é‡è¦ä½†ç´§æ€¥
 
 	private NoteAdapter noteAdapter, noteAdapter1, noteAdapter2, noteAdapter3;
 
@@ -85,19 +85,17 @@ public class Note extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		Intent intent = new Intent();
 		switch (v.getId()) {
-		case R.id.add_btn: // ÖØÒªµ«²»½ô¼±
-
+		case R.id.add_btn: // é‡è¦ä½†ä¸ç´§æ€¥
 			intent.putExtra("iu", 0);
-
 			break;
-		case R.id.add_btn1: // ÖØÒªÇÒ½ô¼±
+		case R.id.add_btn1: // é‡è¦ä¸”ç´§æ€¥
 			intent.putExtra("iu", 1);
 			break;
-		case R.id.add_btn2: // ²»ÖØÒªÇÒ²»½ô¼±
+		case R.id.add_btn2: // ä¸é‡è¦ä¸”ä¸ç´§æ€¥
 			intent.putExtra("iu", 2);
 			break;
 
-		case R.id.add_btn3: // ²»ÖØÒªµ«½ô¼±
+		case R.id.add_btn3: // ä¸é‡è¦ä½†ç´§æ€¥
 			intent.putExtra("iu", 3);
 			break;
 
@@ -150,6 +148,5 @@ public class Note extends Activity implements OnClickListener {
 
 			notimpurge.setAdapter(noteAdapter3);
 		}
-
 	}
 }

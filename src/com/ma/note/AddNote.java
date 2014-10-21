@@ -123,66 +123,55 @@ public class AddNote extends Activity implements OnClickListener {
 		// super.onBackPressed();
 	}
 
-	// ÃÌº”ƒ÷÷”
+	// ËÆæÁΩÆÈóπÈíü
 	private void setAlarmTime(Context context, long timeInMillis) {
-		AlarmManager am = (AlarmManager) context
-				.getSystemService(Context.ALARM_SERVICE);
+		AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent("android.alarm.demo.action");
 		// Intent intent = new Intent(AddNote.this, AlarmReceiver.class);
-		PendingIntent sender = PendingIntent.getBroadcast(context, 0, intent,
-				PendingIntent.FLAG_CANCEL_CURRENT);
+		PendingIntent sender = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 		am.set(AlarmManager.RTC_WAKEUP, timeInMillis, sender);
-		// int interval = 365 * 24 * 60 * 60 * 1000;//  ±º‰º‰∏Ù
+		// int interval = 365 * 24 * 60 * 60 * 1000;//  ±ÔøΩÔøΩÔøΩÔøΩ
 		// am.setRepeating(AlarmManager.RTC_WAKEUP, timeInMillis, interval,
 		// sender);
 	}
 
 	private void showDateDialog() {
 
-		DatePickerDialog dateDialog = new DatePickerDialog(AddNote.this,
-				new OnDateSetListener() {
+		DatePickerDialog dateDialog = new DatePickerDialog(AddNote.this, new OnDateSetListener() {
 
-					@Override
-					public void onDateSet(DatePicker view, int year,
-							int monthOfYear, int dayOfMonth) {
-						// TODO Auto-generated method stub
-						yyyy = year;
-						MM = monthOfYear;
-						dd = dayOfMonth;
-						showTv.setText(yyyy + "ƒÍ" + (MM + 1) + "‘¬" + dd + "»’");
-					}
-				}, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH),
-				calendar.get(Calendar.DAY_OF_MONTH));
+			@Override
+			public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+				// TODO Auto-generated method stub
+				yyyy = year;
+				MM = monthOfYear;
+				dd = dayOfMonth;
+				showTv.setText(yyyy + "Âπ¥" + (MM + 1) + "Êúà" + dd + "Êó•");
+			}
+		}, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
 		dateDialog.show();
-		
 	}
 
 	private void showTimeDialog() {
-		TimePickerDialog timeDialog = new TimePickerDialog(AddNote.this,
-				new OnTimeSetListener() {
-					@Override
-					public void onTimeSet(TimePicker view, int hourOfDay,
-							int minute) {
-						// TODO Auto-generated method stub
-						hh = hourOfDay;
-						mm = minute;
-						// showTv.add
-						millin = formatTime(yyyy, MM + 1, dd, hh, mm);
-						setAlarmTime(AddNote.this, millin);
-						if(hh != 0){
-							Log.d("test", "hhhh");
-							showTv.setText(showTv.getText().toString()+" " + hh + " : " + mm);
-						}
-						if(mm != 0){
-							Log.d("test", "mmmm");
-						}
-						
-						Toast.makeText(AddNote.this, "ƒ÷¡ÂÃÌº”≥…π¶£°",
-								Toast.LENGTH_LONG).show();
-						
-					}
-				}, calendar.get(Calendar.HOUR_OF_DAY),
-				calendar.get(Calendar.MINUTE), true);
+		TimePickerDialog timeDialog = new TimePickerDialog(AddNote.this, new OnTimeSetListener() {
+			@Override
+			public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+				// TODO Auto-generated method stub
+				hh = hourOfDay;
+				mm = minute;
+				// showTv.add
+				millin = formatTime(yyyy, MM + 1, dd, hh, mm);
+				setAlarmTime(AddNote.this, millin);
+				if (hh != 0) {
+					Log.d("test", "hhhh");
+					showTv.setText(showTv.getText().toString() + " " + hh + " : " + mm);
+				}
+				if (mm != 0) {
+					Log.d("test", "mmmm");
+				}
+
+				Toast.makeText(AddNote.this, "ÈóπÈíüËÆæÁΩÆÊàêÂäü", Toast.LENGTH_LONG).show();
+			}
+		}, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
 		timeDialog.show();
 
 	}
